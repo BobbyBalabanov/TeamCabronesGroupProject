@@ -1,6 +1,20 @@
 import time
- 
-seconds = time.time()
-print("Time in seconds since the epoch:", seconds)
-local_time = time.ctime(seconds)
-print("Local time:", local_time)
+  
+# define the countdown func.
+def countdown(t):
+    
+    while t:
+        mins, secs = divmod(t, 60)
+        timer = '{:02d}:{:02d}'.format(mins, secs)
+        print(timer, end="\r")
+        time.sleep(1)
+        t -= 1
+      
+    print('Fire in the hole!!')
+  
+  
+# input time in seconds
+t = 600
+  
+# function call
+countdown(int(t))
