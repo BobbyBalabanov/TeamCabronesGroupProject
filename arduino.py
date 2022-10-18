@@ -7,7 +7,7 @@ REDLEDPIN = 4
 
 pressedButton = []
 
-def countdown(t):
+def timer(t):
     t = 600    
     while t:
         mins, secs = divmod(t, 60)
@@ -17,7 +17,7 @@ def countdown(t):
         t -= 1
       
 
-countdown(int(t))
+timer(int(t))
 
 def setup():
     global board
